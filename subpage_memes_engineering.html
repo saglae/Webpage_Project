@@ -8,6 +8,9 @@
         body {
             background-color: #cfd4d6; /* Hellgrauer Hintergrund */
             margin: 20px; /* Abstand zum Rand der Seite */
+            display: block;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         h1 {
             color: rgb(0, 0, 0); /* Weiße Überschrift */
@@ -15,9 +18,13 @@
         p {
             color: rgb(5, 5, 5); /* Weißer Text */
         }
+        .collage-container {
+            width: 100%;
+            top: 20dvh; /* Abstand zwischen Text und Bildcollage */}
         img {
-            margin-right: 10px; /* Abstand zwischen den Bildern */
+            width: 40%; /* Setze die Breite auf die gewünschte Größe */
             margin-bottom: 10px;
+            top: 20dvh;
         }
     </style>
 </head>
@@ -28,6 +35,9 @@
 
     <!-- Einleitungstext -->
     <p>"Ahhh... Humour based on my pain."</p>
+
+    <br>
+
 
     <!-- Bildcollage -->
     <img src="src/Electrical_Engineering/Flyback_Diode.jpg" alt="Bild 1">

@@ -1,0 +1,1 @@
+In this folder, all necessary pictures can be found.

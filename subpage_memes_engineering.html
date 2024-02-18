@@ -8,31 +8,51 @@
         body {
             background-color: #cfd4d6; /* Hellgrauer Hintergrund */
             margin: 20px; /* Abstand zum Rand der Seite */
-            display: block;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         h1 {
-            color: rgb(0, 0, 0); /* Weiße Überschrift */
+            color: rgb(0, 0, 0); /* Schwarze Überschrift */
         }
         p {
-            color: rgb(5, 5, 5); /* Weißer Text */
+            color: rgb(5, 5, 5); /* Dunkelgrauer Text */
         }
-        .collage-container {
-            width: 100%;
-            top: 20dvh; /* Abstand zwischen Text und Bildcollage */}
+        .image-container {
+            background-color: white; /* Weiße Box um das Bild */
+            padding: 20px; /* Innenabstand der weißen Box */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schatten um die Box */
+            min-height: 200px; /* Mindesthöhe für den Container */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative; /* Relative Positionierung für die Buttons */
+            max-height: 70vh; /* Maximale Höhe für das Bild */
+        }
         img {
-            width: 40%; /* Setze die Breite auf die gewünschte Größe */
+            width: 100%; /* 100% Breite innerhalb der weißen Box */
+            height: auto; /* Automatische Anpassung der Höhe */
             margin-bottom: 10px;
-            top: 20dvh;
+            max-height: 100%; /* Bild darf die Höhe des Containers nicht überschreiten */
         }
         button {
-            background-color: rgb(133, 133, 133); /* Weiz
-            ßer Hintergrund für den Button */
-            color: #000000; /* Hellgrauer Text für den Button */
+            background-color: rgb(133, 133, 133); /* Heller Hintergrund für den Button */
+            color: #000000; /* Dunkler Text für den Button */
             padding: 10px;
             cursor: pointer;
-            margin-bottom: 20px; /* Abstand zwischen Bildcollage und Button */
+            margin-top: 10px; /* Abstand zwischen Bild und Button */
+            position: absolute; /* Absolute Positionierung für die Buttons */
+        }
+        button.left {
+            left: 10px; /* Abstand vom linken Rand */
+            bottom: 10px; /* Abstand vom unteren Rand */
+        }
+        button.right {
+            right: 10px; /* Abstand vom rechten Rand */
+            bottom: 10px; /* Abstand vom unteren Rand */
         }
     </style>
 </head>
@@ -44,23 +64,43 @@
     <!-- Einleitungstext -->
     <p>"Ahhh... Humour based on my pain."</p>
 
-    <br>
+    <!-- Bildcontainer -->
+    <div class="image-container">
+        <!-- Bildcollage -->
+        <img src="src/Electrical_Engineering/Flyback_Diode.jpg" alt="Bild 1" id="memeImage">
+        <!-- Buttons zum Wechsel zwischen Bildern -->
+        <button onclick="showPreviousMeme()" class="left">Zurück</button>
+        <button onclick="showNextMeme()" class="right">Noch eins!</button>
+    </div>
+   
+    <!-- Button "Zurück zur Hauptseite" -->
+    <button onclick="goToSubpage()" class="left">Zurück zur Hauptseite.</button>
 
+    <script>
+        const memeImages = [
+            'src/Electrical_Engineering/Flyback_Diode.jpg',
+            'src/Electrical_Engineering/Fourier.jpg',
+            'src/Electrical_Engineering/Statistics.jpg',
+            'src/Electrical_Engineering/Tweet.jpg'
+            // Füge hier weitere Bild-URLs hinzu, falls benötigt
+        ];
 
-    <!-- Bildcollage -->
-    <img src="src/Electrical_Engineering/Flyback_Diode.jpg" alt="Bild 1">
-    <img src="src/Electrical_Engineering/Fourier.jpg" alt="Bild 2">
-    <img src="src/Electrical_Engineering/Statistics.jpg" alt="Bild 3">
-    <img src="src/Electrical_Engineering/Tweet.jpg" alt="Bild 4">
+        let currentMemeIndex = 0;
 
-   <!-- Button zur Wechsel zur Subpage -->
-   <button onclick="goToSubpage()">Zurück</button>
+        function showNextMeme() {
+            currentMemeIndex = (currentMemeIndex + 1) % memeImages.length;
+            document.getElementById('memeImage').src = memeImages[currentMemeIndex];
+        }
 
-   <script>
-       function goToSubpage() {
-           window.location.href = 'subpage_memes_main.html'; // Ändere dies zu der gewünschten Subpage-URL
-       }
-   </script>
+        function showPreviousMeme() {
+            currentMemeIndex = (currentMemeIndex - 1 + memeImages.length) % memeImages.length;
+            document.getElementById('memeImage').src = memeImages[currentMemeIndex];
+        }
+
+        function goToSubpage() {
+            window.location.href = 'subpage_memes_main.html'; // Ändere dies zu der gewünschten Subpage-URL
+        }
+    </script>
 
 </body>
 </html>

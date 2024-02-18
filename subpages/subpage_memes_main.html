@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Neue Webseite</title>
+    <title>Memes</title>
     <style>
-         body {
-            background-color: #ffffed; /* Beige Hintergrundfarbe */
+        body {
+            background-color: #b3d4df; /* Hellblauer Hintergrund */
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -33,29 +33,32 @@
 <body>
 
     <!-- Überschrift -->
-    <h1>Dieser Tipp hilft garantiert!</h1>
+    <h1>Reddit's Finest</h1>
 
-    <!-- Einleitungstext -->
-    <p>
-    Schade, dass die vorherigen Seiten dich nicht aufmuntern konnten. <br> 
-    Dieser Tipp ist aber unsere Geheimwaffe! Probier es gleich mal aus!</p>
+    <!-- Beschreibungstext -->
+    <p>Auf dieser Seite werden Sarah's aktuelle Lieblingsmemes präsentiert. Such dir eine Kategorie aus! Zeig mir...</p>
 
-    <!-- Button -->
-    <button onclick="openWebpage()">Extrem krasser Tipp</button>
+    <!-- Verlinkung zu Subpage 1 -->
+    <a href="subpage_memes_engineering.html">...Engineering Memes!</a>
 
-     <!-- Button für die Subpage -->
-    <button onclick="goToSubpage()" class="left">Ich habe es mir doch anders überlegt</button>
+    <br>
+    <br>
 
+    <!-- Verlinkung zu Subpage 2 -->
+    <a href="subpage_memes_others.html">...Normalo Memes!</a>
 
-    <!-- Script-Bereich für JavaScript -->
+    <br>
+    <br>
+
+    <!-- GIF einfügen -->
+    <img src="../src/Electrical_Engineering/engineer-fixed.gif" alt="Los gehts!">
+
+    <!-- Button zur Wechsel zur Subpage -->
+    <button onclick="goToSubpage()">Zurück</button>
+
     <script>
-        function openWebpage() {
-            // Öffne die angegebene Webseite in einem neuen Tab/Fenster
-            window.open('https://www.karlsruhe.dhbw.de/fileadmin/user_upload/documents/content-de/Einrichtungen/Pruefungsamt/I-001-F2.3-Antrag-auf-Exmatrikulation-und-Erklaerung-zur-Beendigung-des-Pruefungsverfahrens.pdf', '_blank');
-        }
         function goToSubpage() {
-            // Navigiere zur Subpage HTML
-            window.location.href = 'main_page.html';
+            window.location.href = '../main_page.html'; // Ändere dies zu der gewünschten Subpage-URL
         }
     </script>
 

@@ -36,6 +36,7 @@
         button:hover {
             background-color: #555;
         }
+ 
     </style>
 </head>
 <body>
@@ -49,14 +50,15 @@
     Dieser Tipp ist aber unsere Geheimwaffe! Probier es gleich mal aus!</p>
 
     <!-- Button -->
-    <button onclick="buttonClicked()">Extrem krasser Tipp</button>
+    <button onclick="openWebpage()">Extrem krasser Tipp</button>
 
     <!-- Script-Bereich für JavaScript -->
     <script>
-        function buttonClicked() {
-            alert('Der Button wurde geklickt!');
-            // Hier können weitere Aktionen oder Funktionen nach dem Klicken des Buttons hinzugefügt werden.
+        function openWebpage() {
+            // Öffne die angegebene Webseite in einem neuen Tab/Fenster
+            window.open('https://www.karlsruhe.dhbw.de/fileadmin/user_upload/documents/content-de/Einrichtungen/Pruefungsamt/I-001-F2.3-Antrag-auf-Exmatrikulation-und-Erklaerung-zur-Beendigung-des-Pruefungsverfahrens.pdf', '_blank');
         }
+
     </script>
 
 </body>

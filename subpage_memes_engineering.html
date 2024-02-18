@@ -26,6 +26,14 @@
             margin-bottom: 10px;
             top: 20dvh;
         }
+        button {
+            background-color: rgb(133, 133, 133); /* Weiz
+            ßer Hintergrund für den Button */
+            color: #000000; /* Hellgrauer Text für den Button */
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Abstand zwischen Bildcollage und Button */
+        }
     </style>
 </head>
 <body>
@@ -45,6 +53,14 @@
     <img src="src/Electrical_Engineering/Statistics.jpg" alt="Bild 3">
     <img src="src/Electrical_Engineering/Tweet.jpg" alt="Bild 4">
 
+   <!-- Button zur Wechsel zur Subpage -->
+   <button onclick="goToSubpage()">Zurück</button>
+
+   <script>
+       function goToSubpage() {
+           window.location.href = 'subpage_memes_main.html'; // Ändere dies zu der gewünschten Subpage-URL
+       }
+   </script>
+
 </body>
 </html>
-

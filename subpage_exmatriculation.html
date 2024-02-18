@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Neue Webseite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+        h1 {
+            color: #555;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #888;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        button.left {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Überschrift -->
+    <h1>Dieser Tipp hilft garantiert!</h1>
+
+    <!-- Einleitungstext -->
+    <p>
+    Schade, dass die vorherigen Seiten dich nicht aufmuntern konnten. <br> 
+    Dieser Tipp ist aber unsere Geheimwaffe! Probier es gleich mal aus!</p>
+
+    <!-- Button -->
+    <button onclick="openWebpage()">Extrem krasser Tipp</button>
+
+     <!-- Button für die Subpage -->
+    <button onclick="goToSubpage()" class="left">Ich habe es mir doch anders überlegt</button>
+
+
+    <!-- Script-Bereich für JavaScript -->
+    <script>
+        function openWebpage() {
+            // Öffne die angegebene Webseite in einem neuen Tab/Fenster
+            window.open('https://www.karlsruhe.dhbw.de/fileadmin/user_upload/documents/content-de/Einrichtungen/Pruefungsamt/I-001-F2.3-Antrag-auf-Exmatrikulation-und-Erklaerung-zur-Beendigung-des-Pruefungsverfahrens.pdf', '_blank');
+        }
+        function goToSubpage() {
+            // Navigiere zur Subpage HTML
+            window.location.href = 'main_page.html';
+        }
+    </script>
+
+</body>
+</html>

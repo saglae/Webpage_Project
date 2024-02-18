@@ -5,6 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backecke</title>
+    <style>
+        body {
+            background-color: LightSkyBlue; /* Beige Hintergrundfarbe */
+            margin: 0; /* Entferne den Standardseitenrand */
+            padding: 0; /* Entferne das Standardseitenpadding */
+            font-family: Arial, sans-serif; /* Setze eine Standardschriftart */
+        }
+        header {
+            background-color: #1c60dd; /* Dunkelblauer Hintergrund für den Header */
+            color: #000000; /* Weiße Textfarbe für den Header */
+            text-align: center; /* Zentriere den Text im Header */
+            padding: 20px; /* Füge Innenabstand zum Header hinzu */
+        }
+        main {
+            max-width: 800px; /* Begrenze die maximale Breite des Hauptinhalts */
+            margin: 20px auto; /* Zentriere den Hauptinhalt und füge Außenabstand hinzu */
+        }
+        section {
+            margin-bottom: 20px; /* Füge Abstand zwischen Abschnitten hinzu */
+        }
+        #gifContainer {
+            display: none; /* Standardmäßig den Container ausblenden */
+            margin-bottom: 20px; /* Füge Abstand unter dem GIF-Container hinzu */
+        }
+
+
+        li {
+            margin-bottom: 10px; /* Füge Abstand zwischen den Verlinkungen hinzu */
+        }
+        button {
+            background-color: #4682b4; /* Dunkelblauer Hintergrund für den Button */
+            color: #ffffff; /* Weiße Textfarbe für den Button */
+            padding: 10px 20px; /* Füge Innenabstand zum Button hinzu */
+            cursor: pointer; /* Ändere den Mauszeiger, wenn über dem Button */
+        }
+    </style>
+
+
+
+
 </head>
 <body>
 
@@ -19,13 +59,13 @@
             
             <p>Wenn du keine Lust mehr auf lange Formeln hast, die mehr Buchstaben enthalten als Zahlen, dann geh doch mal zum Bäcker oder zur Catrin!</p>
 
-            <!-- Hier können weitere Inhalte spezifisch für die Backecke-Seite eingefügt werden -->
+ 
             <br>
             
             <h2>Gerade zur Weihnachtszeit ist für alle Geschmäcker was dabei:</h2>
             <img src="src/auswahl.jpg" alt="Backen Bild" width="300" height="200">
             <img src="src/orange.jpg" alt="Backen Bild" width="200" height="200">
-            <img src="src/kipferl.jpg" alt="Backen Bild" width="300" height="200">
+            <img src="src/kipferl.jpg" alt="Backen Bild" width="250" height="200">
 
 
 
@@ -44,18 +84,15 @@
         </section>
     </main>
 
+    
     <button onclick="goToMainPage()">Zurück zur Startseite</button>
 
     <script>
     function goToMainPage() {
-    // Um zur Hauptseite zu wechseln, verwende window.location.href
+    
     window.location.href = 'main_page.html';
     }
     </script>
-    
-
-
-
     
 
 

@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes</title>
+    <style>
+        body {
+            background-color: #cfd4d6; /* Hellgrauer Hintergrund */
+            margin: 20px; /* Abstand zum Rand der Seite */
+            display: block;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        h1 {
+            color: rgb(0, 0, 0); /* Weiße Überschrift */
+        }
+        p {
+            color: rgb(5, 5, 5); /* Weißer Text */
+        }
+        .collage-container {
+            width: 100%;
+            top: 20dvh; /* Abstand zwischen Text und Bildcollage */}
+        img {
+            width: 40%; /* Setze die Breite auf die gewünschte Größe */
+            margin-bottom: 10px;
+            top: 20dvh;
+        }
+        button {
+            background-color: rgb(133, 133, 133); /* Weiz
+            ßer Hintergrund für den Button */
+            color: #000000; /* Hellgrauer Text für den Button */
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Abstand zwischen Bildcollage und Button */
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Überschrift -->
+    <h1>Memes</h1>
+
+    <!-- Einleitungstext -->
+    <p>Die feinste Auswahl aktueller Memes.</p>
+
+    <br>
+
+
+    <!-- Bildcollage -->
+    <img src="src/Electrical_Engineering/Flyback_Diode.jpg" alt="Bild 1">
+    <img src="src/Electrical_Engineering/Fourier.jpg" alt="Bild 2">
+    <img src="src/Electrical_Engineering/Statistics.jpg" alt="Bild 3">
+    <img src="src/Electrical_Engineering/Tweet.jpg" alt="Bild 4">
+
+   <!-- Button zur Wechsel zur Subpage -->
+   <button onclick="goToSubpage()">Zurück</button>
+
+   <script>
+       function goToSubpage() {
+           window.location.href = 'subpage_memes_main.html'; // Ändere dies zu der gewünschten Subpage-URL
+       }
+   </script>
+
+</body>
+</html>

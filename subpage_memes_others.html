@@ -8,9 +8,8 @@
         body {
             background-color: #cfd4d6; /* Hellgrauer Hintergrund */
             margin: 20px; /* Abstand zum Rand der Seite */
-            display: block;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
@@ -21,18 +20,39 @@
         p {
             color: rgb(5, 5, 5); /* Dunkelgrauer Text */
         }
+        .image-container {
+            background-color: white; /* Weiße Box um das Bild */
+            padding: 20px; /* Innenabstand der weißen Box */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schatten um die Box */
+            min-height: 200px; /* Mindesthöhe für den Container */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative; /* Relative Positionierung für die Buttons */
+            max-height: 70vh; /* Maximale Höhe für das Bild */
+        }
         img {
-            width: 60%; /* Setze die Breite auf die gewünschte Größe */
+            width: 100%; /* 100% Breite innerhalb der weißen Box */
             height: auto; /* Automatische Anpassung der Höhe */
             margin-bottom: 10px;
+            max-height: 100%; /* Bild darf die Höhe des Containers nicht überschreiten */
         }
         button {
             background-color: rgb(133, 133, 133); /* Heller Hintergrund für den Button */
             color: #000000; /* Dunkler Text für den Button */
             padding: 10px;
             cursor: pointer;
-            margin-top: 20px; /* Abstand zwischen Bild und Button */
-            margin-right: 10px; /* Abstand zum vorherigen Button */
+            margin-top: 10px; /* Abstand zwischen Bild und Button */
+            position: absolute; /* Absolute Positionierung für die Buttons */
+        }
+        button.left {
+            left: 10px; /* Abstand vom linken Rand */
+            bottom: 10px; /* Abstand vom unteren Rand */
+        }
+        button.right {
+            right: 10px; /* Abstand vom rechten Rand */
+            bottom: 10px; /* Abstand vom unteren Rand */
         }
     </style>
 </head>
@@ -43,16 +63,19 @@
 
     <!-- Einleitungstext -->
     <p>Die feinste Auswahl aktueller Memes.</p>
-    <button onclick="goToSubpage()">Zurück zur Hauptseite.</button>
+    
 
-    <br>
-
-    <!-- Bildcollage -->
-    <img src="src/Other_Memes/Benedryl-Fandersnatch.jpg" alt="Meme 1" id="memeImage">
-
-    <!-- Buttons zum Wechsel zwischen Bildern -->
-    <button onclick="showPreviousMeme()">Zurück</button>
-    <button onclick="showNextMeme()">Noch eins!</button>
+    <!-- Bildcontainer -->
+    <div class="image-container">
+        <!-- Bildcollage -->
+        <img src="src/Other_Memes/Benedryl-Fandersnatch.jpg" alt="Meme 1" id="memeImage">
+        <!-- Buttons zum Wechsel zwischen Bildern -->
+        <button onclick="showPreviousMeme()" class="left">Zurück</button>
+        <button onclick="showNextMeme()" class="right">Noch eins!</button>
+    </div>
+   
+    <!-- Button "Zurück zur Hauptseite" -->
+    <button onclick="goToSubpage()" class="left">Zurück zur Hauptseite.</button>
 
     <script>
         const memeImages = [
@@ -75,11 +98,11 @@
             currentMemeIndex = (currentMemeIndex - 1 + memeImages.length) % memeImages.length;
             document.getElementById('memeImage').src = memeImages[currentMemeIndex];
         }
+
         function goToSubpage() {
-           window.location.href = 'subpage_memes_main.html'; // Ändere dies zu der gewünschten Subpage-URL
-       }
+            window.location.href = 'subpage_memes_main.html'; // Ändere dies zu der gewünschten Subpage-URL
+        }
     </script>
 
 </body>
 </html>
-

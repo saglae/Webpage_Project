@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Webseite</title>
+    <style>
+        body {
+            background-color: #ffffed; /* Beige Hintergrundfarbe */
+            margin: 0; /* Entferne den Standardseitenrand */
+            padding: 0; /* Entferne das Standardseitenpadding */
+            font-family: Arial, sans-serif; /* Setze eine Standardschriftart */
+        }
+        header {
+            background-color: #a0c6e5; /* Dunkelblauer Hintergrund für den Header */
+            color: #000000; /* Weiße Textfarbe für den Header */
+            text-align: center; /* Zentriere den Text im Header */
+            padding: 20px; /* Füge Innenabstand zum Header hinzu */
+        }
+        main {
+            max-width: 800px; /* Begrenze die maximale Breite des Hauptinhalts */
+            margin: 20px auto; /* Zentriere den Hauptinhalt und füge Außenabstand hinzu */
+        }
+        section {
+            margin-bottom: 20px; /* Füge Abstand zwischen Abschnitten hinzu */
+        }
+        #gifContainer {
+            display: none; /* Standardmäßig den Container ausblenden */
+            margin-bottom: 20px; /* Füge Abstand unter dem GIF-Container hinzu */
+        }
+        img {
+            max-width: 100%; /* Sorge dafür, dass das GIF innerhalb seines Containers passt */
+            height: auto; /* Skaliere das GIF beibehalten das Seitenverhältnis */
+        }
+        ul {
+            list-style-type: none; /* Entferne die Aufzählungspunkte von der Verlinkungsliste */
+            padding: 0; /* Entferne das Standardseitenpadding von der Verlinkungsliste */
+        }
+        li {
+            margin-bottom: 10px; /* Füge Abstand zwischen den Verlinkungen hinzu */
+        }
+        button {
+            background-color: #4682b4; /* Dunkelblauer Hintergrund für den Button */
+            color: #ffffff; /* Weiße Textfarbe für den Button */
+            padding: 10px 20px; /* Füge Innenabstand zum Button hinzu */
+            cursor: pointer; /* Ändere den Mauszeiger, wenn über dem Button */
+        }
+    </style>
 </head>
 <body>
 
@@ -13,40 +55,43 @@
 
     <main>
         <section>
-
             <p>Fühlst du dich derzeit auch so gestresst vom Studium? Hörst du gerade zufälligerweise die Vorlesung Wellen und Leitungen?<br>
-            Dann ist es Zeit für eine Pause! Wir haben da etwas für dich vorbereitet.</p>
+                Dann ist es Zeit für eine Pause! Wir haben da etwas für dich vorbereitet.</p>
 
-</body>
-</html>
+            <!-- Container für das GIF und die Verlinkungen -->
+            <div id="gifContainer">
+                <!-- GIF -->
+                <img src="src/Main/tired_cat.gif" alt="GIF">
 
+                <!-- Verlinkungen -->
+                <ul>
+                    <li><a href="subpage_baking.html">Catrins Backstube</a></li>
+                    <li><a href="subpage_memes_main.html">Sarahs Meme-Ecke</a></li>
+                    <li><a href="subpage_exmatriculation.html">Super geheimer Tipp, der alle Probleme löst!</a></li>
+                </ul>
+            </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eigener Button</title>
-</head>
-<body>
+            <!-- Button zum Anzeigen des GIFs und der Verlinkungen -->
+            <button onclick="toggleGIF()">Pause</button>
+        </section>
 
-    <button onclick="buttonClicked()">Pause</button>
+        <!-- Script-Bereich für JavaScript -->
+        <script>
+            // JavaScript-Funktion, die aufgerufen wird, wenn der Button geklickt wird
+            function toggleGIF() {
+                // Verändere den Text des Buttons und zeige/verstecke den Container mit dem GIF und den Verlinkungen
+                var button = document.querySelector('button');
+                var gifContainer = document.getElementById('gifContainer');
 
-    <!-- Script-Bereich für JavaScript -->
-    <script>
-        // JavaScript-Funktion, die aufgerufen wird, wenn der Button geklickt wird
-        function buttonClicked() {
-            alert('Button wurde geklickt!');
-            // Hier kannst du weitere Aktionen oder Funktionen hinzufügen, die nach dem Klicken des Buttons ausgeführt werden sollen.
-        }
-    </script>
-
-
-      
+                if (button.innerText === 'Pause') {
+                    button.innerText = 'Genug Kraft getankt?';
+                    gifContainer.style.display = 'block';
+                } else {
+                    button.innerText = 'Pause';
+                    gifContainer.style.display = 'none';
+                }
+            }
+        </script>
     </main>
-
-
-
 </body>
 </html>
-

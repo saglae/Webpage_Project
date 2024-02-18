@@ -16,11 +16,8 @@
             <p>Fühlst du dich derzeit auch so gestresst vom Studium? Hörst du gerade zufälligerweise die Vorlesung Wellen und Leitungen?<br>
                 Dann ist es Zeit für eine Pause! Wir haben da etwas für dich vorbereitet.</p>
 
-            <!-- Button zum Anzeigen des GIFs und der Verlinkungen -->
-            <button onclick="showGIF()">Pause</button>
-
             <!-- Container für das GIF und die Verlinkungen -->
-            <div id="gifContainer" style="display: none;">
+            <div id="gifContainer" style="display: none; margin-bottom: 20px;">
                 <!-- GIF -->
                 <img src="src/Main/tired_cat.gif" alt="GIF">
 
@@ -31,17 +28,26 @@
                     <li><a href="subpage_exmatriculation.html">Super geheimer Tipp, der alle Probleme löst!</a></li>
                 </ul>
             </div>
+
+            <!-- Button zum Anzeigen des GIFs und der Verlinkungen -->
+            <button onclick="toggleGIF()">Pause</button>
         </section>
 
         <!-- Script-Bereich für JavaScript -->
         <script>
             // JavaScript-Funktion, die aufgerufen wird, wenn der Button geklickt wird
-            function showGIF() {
-                // Verstecke den Button
-                document.querySelector('button').style.display = 'none';
-                
-                // Zeige den Container mit dem GIF und den Verlinkungen
-                document.getElementById('gifContainer').style.display = 'block';
+            function toggleGIF() {
+                // Verändere den Text des Buttons und zeige/verstecke den Container mit dem GIF und den Verlinkungen
+                var button = document.querySelector('button');
+                var gifContainer = document.getElementById('gifContainer');
+
+                if (button.innerText === 'Pause') {
+                    button.innerText = 'Genug Kraft getankt?';
+                    gifContainer.style.display = 'block';
+                } else {
+                    button.innerText = 'Pause';
+                    gifContainer.style.display = 'none';
+                }
             }
         </script>
     </main>

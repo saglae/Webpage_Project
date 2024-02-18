@@ -2,7 +2,9 @@ const memeImages = [
     '../src/Electrical_Engineering/Flyback_Diode.jpg',
     '../src/Electrical_Engineering/Fourier.jpg',
     '../src/Electrical_Engineering/Statistics.jpg',
-    '../src/Electrical_Engineering/Tweet.jpg'
+    '../src/Electrical_Engineering/Tweet.jpg',
+    '../src/Electrical_Engineering/learning.jpeg',
+    '../src/Electrical_Engineering/watt.jpeg'
     // Füge hier weitere Bild-URLs hinzu, falls benötigt
 ];
 

@@ -3,7 +3,12 @@ const memeImages = [
     '../src/Other_Memes/ironman.jpg',
     '../src/Other_Memes/isitcake.jpg',
     '../src/Other_Memes/Benneypop-Cabbagepatch.jpg',
-    '../src/Other_Memes/Tru.jpg'
+    '../src/Other_Memes/Tru.jpg',
+    '../src/Other_Memes/dumbledore.jpeg',
+    '../src/Other_Memes/flowers.jpeg',
+    '../src/Other_Memes/food.jpeg',
+    '../src/Other_Memes/future.jpeg',
+    '../src/Other_Memes/power.jpeg'
     // Füge hier weitere Bild-URLs hinzu, falls benötigt
 ];
 
